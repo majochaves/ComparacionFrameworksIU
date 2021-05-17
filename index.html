@@ -8,8 +8,169 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
-    <div class="d-flex justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Práctica IU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vue.htlm">Vue</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="react.html">React</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="angular.html">Angular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ionic.html">Ionic</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
         <h1>Comparación de frameworks</h1>
+        <table class="table">
+            <tr>
+                <th></th>
+                <th>AngularJS</th>
+                <th>React Native</th>
+                <th>Vue.js</th>
+                <th>Ionic</th>
+            </tr>
+            <tr>
+                <th>Creador</th>
+                <td>Google</td>
+                <td>Facebook</td>
+                <td>Evan You</td>
+                <td>Drifty</td>
+            </tr>
+            <tr>
+                <th>Programado en</th>
+                <td>JavaScript</td>
+                <td>Java, JavaScript, C++, Objective-C, Objective-C++,Python</td>
+                <td>JavaScript + HTML</td>
+                <td>JavaScript, HTML y CSS</td>
+            </tr>
+            <tr>
+                <th>Lenguaje utilizado</th>
+                <td>JavaScript</td>
+                <td>JavaScript y React (Se recomienda conocimientos de Java y Swift)</td>
+                <td>JavaScript</td>
+                <td>JavaScript</td>
+            </tr>
+            <tr>
+                <th>Código abierto</th>
+                <td>Sí</td>
+                <td>Sí</td>
+                <td>Sí</td>
+                <td>Sí</td>
+            </tr>
+            <tr>
+                <th>Enfoque</th>
+                <td>SPA (Single Page Application)</td>
+                <td>Desarrollo de aplicaciones móviles</td>
+                <td>SPA (Single Page Application)</td>
+                <td>Desarrollo de aplicaciones móviles</td>
+            </tr>
+            <tr>
+                <th>Licencia MIT</th>
+                <td>Sí</td>
+                <td>Sí</td>
+                <td>Sí</td>
+                <td>Sí</td>
+            </tr>
+            <tr>
+                <th>Patrón de diseño</th>
+                <td>MVC</td>
+                <td>Container-View</td>
+                <td>MVVM (Model-View-ViewModel)</td>
+                <td>MVC</td>
+            </tr>
+            <tr>
+                <th>Permite cross-platform development</th>
+                <td>Sí</td>
+                <td>Sí</td>
+                <td>No (nativamente).</td>
+                <td>Sí</td>
+            </tr>
+            <tr>
+                <th>Permite hot-reloading</th>
+                <td>Sí</td>
+                <td>Sí</td>
+                <td>Sí</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <th>Rendimiento</th>
+                <td>Medio (problemas de rendimiento de “Dirty checking”)</td>
+                <td>Alto (JavaScript puede comunicarse con elementos nativos - Bridge)</td>
+                <td>Alto</td>
+                <td>Bajo en aplicaciones nativas</td>
+            </tr>
+            <tr>
+                <th>Seguridad</th>
+                <td>Vulnerabilidad XSS</td>
+                <td>Posibles problemas con  JavaScript</td>
+                <td>Vulnerabilidad XSS</td>
+                <td>Posibles problemas en aplicaciones híbridas</td>
+            </tr>
+            <tr>
+                <th>Año de lanzamiento</th>
+                <td>2010</td>
+                <td>2015</td>
+                <td>2014</td>
+                <td>2013</td>
+            </tr>
+            <tr>
+                <th>Compatibilidad</th>
+                <td>Compatible con frameworks de backend</td>
+                <td>Compatible con Ionic y frameworks de backend. Puede tener algún problema de compatibilidad debido a su versión.</td>
+                <td>Compatible con Ionic y frameworks de backend</td>
+                <td>Compatible con Angular, React, Vue, Vanilla Javascript</td>
+            </tr>
+            <tr>
+                <th>Tamaño</th>
+                <td>1.2MB</td>
+                <td>8.22MB</td>
+                <td>-</td>
+                <td>2.88MB</td>
+            </tr>
+            <tr>
+                <th>Última versión</th>
+                <td>1.8.2</td>
+                <td>0.64</td>
+                <td>3.0.11</td>
+                <td>5.3.4</td>
+            </tr>
+            <tr>
+                <th>Curva de aprendizaje</th>
+                <td>Alta (conceptos difusos y gran complejidad)</td>
+                <td>Baja</td>
+                <td>Baja (necesita estar familiarizado con HTML y ES5 JavaScript).</td>
+                <td>Baja</td>
+            </tr>
+            <tr>
+                <th>Popularidad (según encuestas oficiales de JetBrains)</th>
+                <td>11%</td>
+                <td>21%</td>
+                <td>32%</td>
+                <td>6%</td>
+            </tr>
+            <tr>
+                <th>Demanda en el mercado</th>
+                <td>Alta</td>
+                <td>Muy alta.</td>
+                <td>Baja</td>
+                <td>Baja</td>
+            </tr>
+        </table>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
