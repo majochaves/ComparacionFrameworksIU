@@ -1,16 +1,289 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Comparación de frameworks: React Native</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3964857799.js" crossorigin="anonymous"></script>
+    <style>
+        .imgReact {
+            height: 200px;
+            width: auto;
+        }
+        .tamanyoLogo {
+            height: 100px;
+            width: auto;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="d-flex justify-content-center">
-        <h1>React Native</h1>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-start ms-2">
+                <img width="45" height="45" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPGc+CgkJCTxwYXRoIGQ9Ik0xODIuMzA4LDI2NC43MDF2LTUwLjc4NmgzMS4xMzF2NDkuODYzYzAsMTQuMTE0LDUuNDA4LDE5LjM5MSwxNC4xMTUsMTkuMzkxYzguNzA2LDAsMTQuMTE0LTUuMjc2LDE0LjExNC0xOS4zOTEgICAgIHYtNDkuODYzaDMwLjYwNHY1MC43ODZjMCwyNy43MDItMTYuNjIxLDQzLjY2My00NC45ODIsNDMuNjYzQzE5OC45MjksMzA4LjM2NCwxODIuMzA4LDI5Mi40MDMsMTgyLjMwOCwyNjQuNzAxeiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNMjkzLjExMiwyMTMuOTE1aDMxLjEzMXY5Mi4zMzloLTMxLjEzMVYyMTMuOTE1eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCTwvZz4KCTwvZz4KCTxnPgoJCTxnPgoJCQk8cGF0aCBkPSJNMjU1Ljk2OCw0MTkuNzg0Yy05MC4zMTEsMC0xNjMuNzg1LTczLjQ3NC0xNjMuNzg1LTE2My43ODRjMC05MC4zMTIsNzMuNDc0LTE2My43ODUsMTYzLjc4NS0xNjMuNzg1ICAgICBTNDE5Ljc1MywxNjUuNjg4LDQxOS43NTMsMjU2QzQxOS43NTMsMzQ2LjMxMSwzNDYuMjc5LDQxOS43ODQsMjU1Ljk2OCw0MTkuNzg0eiBNMjU1Ljk2OCwxMjIuMjE1ICAgICBjLTczLjc2OSwwLTEzMy43ODUsNjAuMDE2LTEzMy43ODUsMTMzLjc4NWMwLDczLjc2OSw2MC4wMTYsMTMzLjc4NCwxMzMuNzg1LDEzMy43ODRTMzg5Ljc1MywzMjkuNzY5LDM4OS43NTMsMjU2ICAgICBDMzg5Ljc1MywxODIuMjMsMzI5LjczNywxMjIuMjE1LDI1NS45NjgsMTIyLjIxNXoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCQk8L2c+CgkJPGc+CgkJCTxnPgoJCQkJPGc+CgkJCQkJPHJlY3QgeD0iMjQxIiB5PSI0NjEuNTc3IiB3aWR0aD0iMzAiIGhlaWdodD0iNTAuNDIzIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQk8cmVjdCB4PSI0NjEuNTc3IiB5PSIyNDEiIHdpZHRoPSI1MC40MjMiIGhlaWdodD0iMzAiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCTxyZWN0IHk9IjI0MSIgd2lkdGg9IjUwLjQyMiIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJPHJlY3QgeD0iMjQxIiB3aWR0aD0iMzAiIGhlaWdodD0iNTAuNDIyIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQk8cmVjdCB4PSIyNDEiIHk9IjQ2MS41NzciIHdpZHRoPSIzMCIgaGVpZ2h0PSI1MC40MjMiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCTxyZWN0IHg9IjQ2MS41NzciIHk9IjI0MSIgd2lkdGg9IjUwLjQyMyIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJPHJlY3QgeT0iMjQxIiB3aWR0aD0iNTAuNDIyIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCTwvZz4KCQkJPGc+CgkJCQk8Zz4KCQkJCQkKCQkJCQkJPHJlY3QgeD0iMTEyLjAzNyIgeT0iNDM4Ljg5MiIgdHJhbnNmb3JtPSJtYXRyaXgoMC41MTQ1IC0wLjg1NzUgMC44NTc1IDAuNTE0NSAtMzIyLjU3MDMgMzM4LjAzNzYpIiB3aWR0aD0iNTAuNDIzIiBoZWlnaHQ9IjI5Ljk5OSIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjQzOC44OTIiIHk9IjM0OS41NDEiIHRyYW5zZm9ybT0ibWF0cml4KDAuNTE0NiAtMC44NTc1IDAuODU3NSAwLjUxNDYgLTEwMC45OTQzIDU3MS4xMTQyKSIgd2lkdGg9IjMwLjAwMSIgaGVpZ2h0PSI1MC40MjMiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCQoJCQkJCQk8cmVjdCB4PSI0My4xMDciIHk9IjExMi4wMzYiIHRyYW5zZm9ybT0ibWF0cml4KDAuNTE0NSAtMC44NTc1IDAuODU3NSAwLjUxNDUgLTg5LjQ3NjMgMTE2LjQ1MzEpIiB3aWR0aD0iMzAuMDAxIiBoZWlnaHQ9IjUwLjQyMiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjM0OS41NDEiIHk9IjQzLjEwOCIgdHJhbnNmb3JtPSJtYXRyaXgoMC41MTQ1IC0wLjg1NzUgMC44NTc1IDAuNTE0NSAxMzIuMTA1MyAzNDkuNTQ5NSkiIHdpZHRoPSI1MC40MjMiIGhlaWdodD0iMjkuOTk5IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQkKCQkJCQkJPHJlY3QgeD0iMTEyLjAzNyIgeT0iNDM4Ljg5MiIgdHJhbnNmb3JtPSJtYXRyaXgoMC41MTQ1IC0wLjg1NzUgMC44NTc1IDAuNTE0NSAtMzIyLjU3MDMgMzM4LjAzNzYpIiB3aWR0aD0iNTAuNDIzIiBoZWlnaHQ9IjI5Ljk5OSIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjQzOC44OTIiIHk9IjM0OS41NDEiIHRyYW5zZm9ybT0ibWF0cml4KDAuNTE0NiAtMC44NTc1IDAuODU3NSAwLjUxNDYgLTEwMC45OTQzIDU3MS4xMTQyKSIgd2lkdGg9IjMwLjAwMSIgaGVpZ2h0PSI1MC40MjMiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCQoJCQkJCQk8cmVjdCB4PSI0My4xMDciIHk9IjExMi4wMzYiIHRyYW5zZm9ybT0ibWF0cml4KDAuNTE0NSAtMC44NTc1IDAuODU3NSAwLjUxNDUgLTg5LjQ3NjMgMTE2LjQ1MzEpIiB3aWR0aD0iMzAuMDAxIiBoZWlnaHQ9IjUwLjQyMiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQk8L2c+CgkJCTxnPgoJCQkJPGc+CgkJCQkJPHJlY3QgeD0iMjguOTEiIHk9IjM1Mi44NDEiIHRyYW5zZm9ybT0ibWF0cml4KDAuODc0NyAtMC40ODQ2IDAuNDg0NiAwLjg3NDcgLTE3MS40NzY2IDcyLjMwNDcpIiB3aWR0aD0iNTAuNDIyIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQkKCQkJCQkJPHJlY3QgeD0iMzUyLjg0MSIgeT0iNDMyLjY2NyIgdHJhbnNmb3JtPSJtYXRyaXgoMC44NzQ3IC0wLjQ4NDYgMC40ODQ2IDAuODc0NyAtMTc1LjgxMTYgMjM1LjYxNDEpIiB3aWR0aD0iMzAuMDAxIiBoZWlnaHQ9IjUwLjQyMyIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjEyOS4xNTgiIHk9IjI4LjkxIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjg3NDcgLTAuNDg0NiAwLjQ4NDYgMC44NzQ3IC04LjE2OTMgNzYuNjM5NCkiIHdpZHRoPSIzMC4wMDEiIGhlaWdodD0iNTAuNDIzIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQkKCQkJCQkJPHJlY3QgeD0iNDMyLjY2NyIgeT0iMTI5LjE1OSIgdHJhbnNmb3JtPSJtYXRyaXgoMC44NzQ3IC0wLjQ4NDYgMC40ODQ2IDAuODc0NyAtMTIuNTAzNSAyMzkuOTQ2MSkiIHdpZHRoPSI1MC40MjIiIGhlaWdodD0iMzAiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCTxyZWN0IHg9IjI4LjkxIiB5PSIzNTIuODQxIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjg3NDcgLTAuNDg0NiAwLjQ4NDYgMC44NzQ3IC0xNzEuNDc2NiA3Mi4zMDQ3KSIgd2lkdGg9IjUwLjQyMiIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjM1Mi44NDEiIHk9IjQzMi42NjciIHRyYW5zZm9ybT0ibWF0cml4KDAuODc0NyAtMC40ODQ2IDAuNDg0NiAwLjg3NDcgLTE3NS44MTE2IDIzNS42MTQxKSIgd2lkdGg9IjMwLjAwMSIgaGVpZ2h0PSI1MC40MjMiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCQoJCQkJCQk8cmVjdCB4PSIxMjkuMTU4IiB5PSIyOC45MSIgdHJhbnNmb3JtPSJtYXRyaXgoMC44NzQ3IC0wLjQ4NDYgMC40ODQ2IDAuODc0NyAtOC4xNjkzIDc2LjYzOTQpIiB3aWR0aD0iMzAuMDAxIiBoZWlnaHQ9IjUwLjQyMyIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQk8L2c+CgkJPC9nPgoJPC9nPgo8L2c+CgoKCgoKCgoKCgoKCgoKCjwvZz48L3N2Zz4=" />
+                <a class="navbar-brand ms-3" href="#">Práctica IU</a>
+            </div>
+            <div class="d-flex justify-content-end">
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item me-4">
+                            <a class="nav-link" aria-current="page" href="./angularjs.html">Angular.js</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="./ionic.html">Ionic</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link active" href="#">React native</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="./vuejs.html">Vue</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" aria-current="page" href="./index.html">Diferencias de Frameworks</a>
+                        </li>
+                    </ul>
+                </div>
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+<!--Logo y descripcion-->
+    <div class="container-fluid bg-dark pt-5 pb-3">
+
+        <div class="row justify-content-center p-5 pb-3">
+            <div class="col-auto">
+                <img class="imgReact" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" >
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <h1 class="display-3 fw-bold text-info">React Native</h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <p class="lead mb-4 text-center mt-2 text-white">
+                    React, se trata de una biblioteca de Javascript open source que sirve para construir interfaces de
+                    usuario. De ahí surge <b>React Native</b>, que se trata de un framework creado por <b>Facebook</b> para construir 
+                    principalmente aplicaciones móviles (también para aplicaciones pc) utilizando JavaScript y React.
+                </p>
+            </div>
+        </div>
+        
     </div>
+
+
+
+
+    <div class="container-fluid bg-light pt-4 pb-2">
+
+<!--Algunas ventajas-->
+        <div class="row justify-content-center pb-3">
+            <div class="col-auto">
+                <h3 class="fw-bold text-dark">Algunas ventajas</h3>
+            </div>
+        </div>
+
+    
+        <div class="row justify-content-center">
+            <div class="col-10 col-sm-8 col-lg-6">
+                
+                <p class="lead mb-4 text-center mt-2">
+                    Una de las grandes ventajas de este framework es que nos permite crear una aplicación móvil que puede 
+                    ser ejecutada tanto para Android como para iOS, sin tener que usar 2 lenguajes distintos (a diferencia
+                    de usar Java/Kotling para Android y Objective-C/Swift para iOS).
+                </p>
+
+                <p class="lead mb-4 text-center mt-2">
+                    Gracias a la tecnología <b>Bridge</b>, el JavaScript de React Native permite comunicarse con componentes nativos, 
+                    por lo que es mucho más rápido y eficiente a diferencia de otras tecnologías híbridas.
+                </p>
+
+                
+            </div>
+            
+        </div>
+
+
+
+<!--Boton comparar frameworks-->
+        <div class="row justify-content-center pt-2 pb-4">
+            <div class="col-10 col-sm-8 col-lg-6 text-center">
+                
+                <a type="button" class="btn btn-info btn-lg btn-block text-white" href="./index.html">
+                    Comparar React Native con otros Frameworks  &nbsp;&nbsp;<i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+
+
+<!--Aplicaciones que usan React Native-->
+        <hr class="bg-dark border-2">
+
+        <div class="row justify-content-center pt-4">
+            <div class="col-auto">
+                <h3 class="fw-bold text-dark text-center">Algunas aplicaciones que confían en React Native</h3>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="row justify-content-center">
+                    <img class="tamanyoLogo" src="https://d33wubrfki0l68.cloudfront.net/3a27dc4d9b5ed67b4b773f049b5de2466101f3b7/e47c0/img/showcase/facebook.png">
+                </div>
+                <div class="row justify-content-center">
+                    <p class="h4 fw-bold text-dark text-center mt-2">Facebook</p>
+                    <div class="col-10 col-sm-9 col-lg-8">
+                        <p class="lead text-justify mb-4">
+                            Facebook es un servicio de redes y medios sociales en línea estadounidense con sede en Menlo Park, 
+                            California. Su sitio web fue lanzado el 4 de febrero de 2004 por Mark Zuckerberg.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+
+                <div class="row justify-content-center">
+                    <img class="tamanyoLogo" src="https://d33wubrfki0l68.cloudfront.net/53c6146a473095cb6418e07f01d38292daf70891/d5dac/img/showcase/instagram.png">
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <p class="h4 fw-bold text-dark text-center mt-2">Instagram</p>
+
+                    <div class="col-10 col-sm-9 col-lg-8">
+                        <p class="lead text-justify mb-4">
+                            Instagram es una aplicación y red social de origen estadounidense, propiedad de Facebook,
+                            cuya función principal es poder compartir fotografías y vídeos con otros usuarios. Está disponible
+                            para dispositivos Android, iOS y Windows 10.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+
+                <div class="row justify-content-center">
+                    <img class="tamanyoLogo" src="https://d33wubrfki0l68.cloudfront.net/5be3f5f20eaa5a1ff1c9e4b2f58ea421c84c8106/7987e/img/showcase/discord.png">
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <p class="h4 fw-bold text-dark text-center mt-2">Discord</p>
+
+                    <div class="col-10 col-sm-9 col-lg-8">
+                        <p class="lead text-justify mb-4">
+                            Discord es un servicio de mensajería instantánea freeware de chat de voz VolP, video y chat 
+                            por texto; este funciona a través de servidores; este está separado en canales ya sea de texto 
+                            o de voz. Discord está disponible para Microsoft Windows, MacOS, Android, iOS y Linux.
+                        </p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="row justify-content-center">
+                    <img class="tamanyoLogo" src="https://d33wubrfki0l68.cloudfront.net/ee81e39810f4cd187ded751ffa1368040b2f740e/b1f6c/img/showcase/skype.png">
+                </div>
+                <div class="row justify-content-center">
+                    <p class="h4 fw-bold text-dark text-center mt-2">Skype</p>
+                    <div class="col-10 col-sm-9 col-lg-8">
+                        <p class="lead text-justify mb-4">
+                            Skype es un software propietario distribuido por Microsoft, tras haber comprado la compañía 
+                            homónima y que permite comunicaciones de texto, voz y vídeo sobre Internet (VoIP). Fue diseñado 
+                            en 2003 por el danés Janus Friis y el sueco Niklas Zennström (también creadores de Kazaa) y 
+                            desarrollada en su solución técnica por los estonios Priit Kasesalu, Ahti Heinla y Jaan Tallinn, 
+                            ya que de hecho Skype nació en Tallin, Estonia.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="row justify-content-center">
+                    <img class="tamanyoLogo" src="https://d33wubrfki0l68.cloudfront.net/f9f9656ba58a1f9e5446f1e84a70d3e39b145c5b/bc648/img/showcase/pinterest.png">
+                </div>
+                <div class="row justify-content-center">
+                    <p class="h4 fw-bold text-dark text-center mt-2">Pinterest</p>
+                    <div class="col-10 col-sm-9 col-lg-8">
+                        <p class="lead text-justify mb-4">
+                            Pinterest es una plataforma que permite a los usuarios crear y administrar, en tableros personales
+                            temáticos, colecciones de imágenes como eventos, intereses, aficiones y mucho más. Los usuarios 
+                            pueden buscar otros pinboards, "repinchar" imágenes para sus propias colecciones. La misión de 
+                            Pinterest es "conectar a todos en el mundo, a través de cosas que encuentran interesantes"
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="row justify-content-center">
+                    <img class="tamanyoLogo" src="https://d33wubrfki0l68.cloudfront.net/fff92276613025598e7ff604f479623c7468abb9/dcb56/img/showcase/tesla.png">
+                </div>
+                <div class="row justify-content-center">
+                    <p class="h4 fw-bold text-dark text-center mt-2">Tesla</p>
+                    <div class="col-10 col-sm-9 col-lg-8">
+                        <p class="lead text-justify mb-4">
+                            Tesla  es una empresa estadounidense con sede en Palo Alto,
+                            California, y liderada por Elon Musk, que diseña, fabrica y vende automóviles eléctricos, componentes
+                            para la propulsión de vehículos eléctricos y baterías domésticas.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            
+        </div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+        
+
+    
+    
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
