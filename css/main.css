@@ -22,3 +22,10 @@ a.linkVerde{
     color: #00e676 !important;
     text-decoration: none;
 }
+
+.border-success.oscuro{
+    border-color: #33691e !important;
+}
+.border-info.oscuro{
+    border-color: #01579b !important;
+}
