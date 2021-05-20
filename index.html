@@ -9,27 +9,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-start ms-2">
+                <img width="45" height="45" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPGc+CgkJCTxwYXRoIGQ9Ik0xODIuMzA4LDI2NC43MDF2LTUwLjc4NmgzMS4xMzF2NDkuODYzYzAsMTQuMTE0LDUuNDA4LDE5LjM5MSwxNC4xMTUsMTkuMzkxYzguNzA2LDAsMTQuMTE0LTUuMjc2LDE0LjExNC0xOS4zOTEgICAgIHYtNDkuODYzaDMwLjYwNHY1MC43ODZjMCwyNy43MDItMTYuNjIxLDQzLjY2My00NC45ODIsNDMuNjYzQzE5OC45MjksMzA4LjM2NCwxODIuMzA4LDI5Mi40MDMsMTgyLjMwOCwyNjQuNzAxeiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCQk8cGF0aCBkPSJNMjkzLjExMiwyMTMuOTE1aDMxLjEzMXY5Mi4zMzloLTMxLjEzMVYyMTMuOTE1eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCTwvZz4KCTwvZz4KCTxnPgoJCTxnPgoJCQk8cGF0aCBkPSJNMjU1Ljk2OCw0MTkuNzg0Yy05MC4zMTEsMC0xNjMuNzg1LTczLjQ3NC0xNjMuNzg1LTE2My43ODRjMC05MC4zMTIsNzMuNDc0LTE2My43ODUsMTYzLjc4NS0xNjMuNzg1ICAgICBTNDE5Ljc1MywxNjUuNjg4LDQxOS43NTMsMjU2QzQxOS43NTMsMzQ2LjMxMSwzNDYuMjc5LDQxOS43ODQsMjU1Ljk2OCw0MTkuNzg0eiBNMjU1Ljk2OCwxMjIuMjE1ICAgICBjLTczLjc2OSwwLTEzMy43ODUsNjAuMDE2LTEzMy43ODUsMTMzLjc4NWMwLDczLjc2OSw2MC4wMTYsMTMzLjc4NCwxMzMuNzg1LDEzMy43ODRTMzg5Ljc1MywzMjkuNzY5LDM4OS43NTMsMjU2ICAgICBDMzg5Ljc1MywxODIuMjMsMzI5LjczNywxMjIuMjE1LDI1NS45NjgsMTIyLjIxNXoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCQk8L2c+CgkJPGc+CgkJCTxnPgoJCQkJPGc+CgkJCQkJPHJlY3QgeD0iMjQxIiB5PSI0NjEuNTc3IiB3aWR0aD0iMzAiIGhlaWdodD0iNTAuNDIzIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQk8cmVjdCB4PSI0NjEuNTc3IiB5PSIyNDEiIHdpZHRoPSI1MC40MjMiIGhlaWdodD0iMzAiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCTxyZWN0IHk9IjI0MSIgd2lkdGg9IjUwLjQyMiIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJPHJlY3QgeD0iMjQxIiB3aWR0aD0iMzAiIGhlaWdodD0iNTAuNDIyIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQk8cmVjdCB4PSIyNDEiIHk9IjQ2MS41NzciIHdpZHRoPSIzMCIgaGVpZ2h0PSI1MC40MjMiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCTxyZWN0IHg9IjQ2MS41NzciIHk9IjI0MSIgd2lkdGg9IjUwLjQyMyIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJPHJlY3QgeT0iMjQxIiB3aWR0aD0iNTAuNDIyIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCTwvZz4KCQkJPGc+CgkJCQk8Zz4KCQkJCQkKCQkJCQkJPHJlY3QgeD0iMTEyLjAzNyIgeT0iNDM4Ljg5MiIgdHJhbnNmb3JtPSJtYXRyaXgoMC41MTQ1IC0wLjg1NzUgMC44NTc1IDAuNTE0NSAtMzIyLjU3MDMgMzM4LjAzNzYpIiB3aWR0aD0iNTAuNDIzIiBoZWlnaHQ9IjI5Ljk5OSIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjQzOC44OTIiIHk9IjM0OS41NDEiIHRyYW5zZm9ybT0ibWF0cml4KDAuNTE0NiAtMC44NTc1IDAuODU3NSAwLjUxNDYgLTEwMC45OTQzIDU3MS4xMTQyKSIgd2lkdGg9IjMwLjAwMSIgaGVpZ2h0PSI1MC40MjMiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCQoJCQkJCQk8cmVjdCB4PSI0My4xMDciIHk9IjExMi4wMzYiIHRyYW5zZm9ybT0ibWF0cml4KDAuNTE0NSAtMC44NTc1IDAuODU3NSAwLjUxNDUgLTg5LjQ3NjMgMTE2LjQ1MzEpIiB3aWR0aD0iMzAuMDAxIiBoZWlnaHQ9IjUwLjQyMiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjM0OS41NDEiIHk9IjQzLjEwOCIgdHJhbnNmb3JtPSJtYXRyaXgoMC41MTQ1IC0wLjg1NzUgMC44NTc1IDAuNTE0NSAxMzIuMTA1MyAzNDkuNTQ5NSkiIHdpZHRoPSI1MC40MjMiIGhlaWdodD0iMjkuOTk5IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQkKCQkJCQkJPHJlY3QgeD0iMTEyLjAzNyIgeT0iNDM4Ljg5MiIgdHJhbnNmb3JtPSJtYXRyaXgoMC41MTQ1IC0wLjg1NzUgMC44NTc1IDAuNTE0NSAtMzIyLjU3MDMgMzM4LjAzNzYpIiB3aWR0aD0iNTAuNDIzIiBoZWlnaHQ9IjI5Ljk5OSIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjQzOC44OTIiIHk9IjM0OS41NDEiIHRyYW5zZm9ybT0ibWF0cml4KDAuNTE0NiAtMC44NTc1IDAuODU3NSAwLjUxNDYgLTEwMC45OTQzIDU3MS4xMTQyKSIgd2lkdGg9IjMwLjAwMSIgaGVpZ2h0PSI1MC40MjMiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCQoJCQkJCQk8cmVjdCB4PSI0My4xMDciIHk9IjExMi4wMzYiIHRyYW5zZm9ybT0ibWF0cml4KDAuNTE0NSAtMC44NTc1IDAuODU3NSAwLjUxNDUgLTg5LjQ3NjMgMTE2LjQ1MzEpIiB3aWR0aD0iMzAuMDAxIiBoZWlnaHQ9IjUwLjQyMiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQk8L2c+CgkJCTxnPgoJCQkJPGc+CgkJCQkJPHJlY3QgeD0iMjguOTEiIHk9IjM1Mi44NDEiIHRyYW5zZm9ybT0ibWF0cml4KDAuODc0NyAtMC40ODQ2IDAuNDg0NiAwLjg3NDcgLTE3MS40NzY2IDcyLjMwNDcpIiB3aWR0aD0iNTAuNDIyIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQkKCQkJCQkJPHJlY3QgeD0iMzUyLjg0MSIgeT0iNDMyLjY2NyIgdHJhbnNmb3JtPSJtYXRyaXgoMC44NzQ3IC0wLjQ4NDYgMC40ODQ2IDAuODc0NyAtMTc1LjgxMTYgMjM1LjYxNDEpIiB3aWR0aD0iMzAuMDAxIiBoZWlnaHQ9IjUwLjQyMyIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjEyOS4xNTgiIHk9IjI4LjkxIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjg3NDcgLTAuNDg0NiAwLjQ4NDYgMC44NzQ3IC04LjE2OTMgNzYuNjM5NCkiIHdpZHRoPSIzMC4wMDEiIGhlaWdodD0iNTAuNDIzIiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3JlY3Q+CgkJCQk8L2c+CgkJCQk8Zz4KCQkJCQkKCQkJCQkJPHJlY3QgeD0iNDMyLjY2NyIgeT0iMTI5LjE1OSIgdHJhbnNmb3JtPSJtYXRyaXgoMC44NzQ3IC0wLjQ4NDYgMC40ODQ2IDAuODc0NyAtMTIuNTAzNSAyMzkuOTQ2MSkiIHdpZHRoPSI1MC40MjIiIGhlaWdodD0iMzAiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCTxyZWN0IHg9IjI4LjkxIiB5PSIzNTIuODQxIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjg3NDcgLTAuNDg0NiAwLjQ4NDYgMC44NzQ3IC0xNzEuNDc2NiA3Mi4zMDQ3KSIgd2lkdGg9IjUwLjQyMiIgaGVpZ2h0PSIzMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQkJPGc+CgkJCQkJCgkJCQkJCTxyZWN0IHg9IjM1Mi44NDEiIHk9IjQzMi42NjciIHRyYW5zZm9ybT0ibWF0cml4KDAuODc0NyAtMC40ODQ2IDAuNDg0NiAwLjg3NDcgLTE3NS44MTE2IDIzNS42MTQxKSIgd2lkdGg9IjMwLjAwMSIgaGVpZ2h0PSI1MC40MjMiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCQkJCTwvZz4KCQkJCTxnPgoJCQkJCQoJCQkJCQk8cmVjdCB4PSIxMjkuMTU4IiB5PSIyOC45MSIgdHJhbnNmb3JtPSJtYXRyaXgoMC44NzQ3IC0wLjQ4NDYgMC40ODQ2IDAuODc0NyAtOC4xNjkzIDc2LjYzOTQpIiB3aWR0aD0iMzAuMDAxIiBoZWlnaHQ9IjUwLjQyMyIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9yZWN0PgoJCQkJPC9nPgoJCQk8L2c+CgkJPC9nPgoJPC9nPgo8L2c+CgoKCgoKCgoKCgoKCgoKCjwvZz48L3N2Zz4=" />
+                <a class="navbar-brand ms-3" href="#">Práctica IU</a>
+            </div>
+            <div class="d-flex justify-content-end">
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item me-4">
+                          <a class="nav-link" href="./angularjs.html">Angular.js</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="./ionic.html">Ionic</a>
+                        </li>
+                        <li class="nav-item me-4">
+                          <a class="nav-link" href="./reactnative.html">React native</a>
+                        </li>
+                        <li class="nav-item me-4">
+                          <a class="nav-link" aria-current="page" href="./vuejs.html">Vue</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" aria-current="page" href="./index.html" style="color: white; text-decoration: none;">Diferencias de Frameworks</a>
+                        </li>
+                    </ul>
+                </div>
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <img class="d-block mx-auto mb-1" src="https://image.flaticon.com/icons/png/512/2519/2519334.png"
-                    alt="framework" width="50" height="50">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-                <span class="fs-4">Práctica IU</span>
-            </a>
+    <br>
 
-            <ul class="nav nav-pills topbar">
-                <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
-                <li class="nav-item"><a href="vuejs.html" class="nav-link" aria-current="page">Vue</a></li>
-                <li class="nav-item"><a href="reactnative.html" class="nav-link">React</a></li>
-                <li class="nav-item"><a href="angularjs.html" class="nav-link">Angular</a></li>
-                <li class="nav-item"><a href="ionic.html" class="nav-link">Ionic</a></li>
-            </ul>
-        </header>
-    </div>
     <div class="container">
         <h1>Comparación de frameworks</h1>
         <table class="table">
