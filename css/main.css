@@ -1,0 +1,24 @@
+/*      TAMANYOS   */
+.tamanyoLogoFramework {
+    height: 200px;
+    width: auto;
+}
+.tamanyoLogos {
+    height: 100px;
+    width: auto;
+}
+
+.tamanyoImgNavBar {
+    width: 45px;
+    height: 45px;
+}
+
+/*      COLORES   */
+.textoColorVerde {
+    color: #00e676;
+}
+
+a.linkVerde{
+    color: #00e676 !important;
+    text-decoration: none;
+}
