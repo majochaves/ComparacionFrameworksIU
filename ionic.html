@@ -1,16 +1,128 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <link rel="icon" href="https://victorpastor.com/wp-content/uploads/2020/11/logo.png">
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Comparación de frameworks: Ionic</title>
+    <title>Comparación de frameworks: Vue.js</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style type="text/css">
+        #topbar .active a {
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="d-flex justify-content-center">
-        <h1>Ionic</h1>
+    <div class="container">
+
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img class="d-block mx-auto mb-1" src="https://image.flaticon.com/icons/png/512/2519/2519334.png"
+                    alt="framework" width="50" height="50">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+                <span class="fs-4">Práctica IU</span>
+            </a>
+
+            <ul class="nav nav-pills topbar">
+                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="vuejs.html" class="nav-link">Vue.js</a></li>
+                <li class="nav-item"><a href="reactnative.html" class="nav-link">React Native</a></li>
+                <li class="nav-item"><a href="angularjs.html" class="nav-link">AngularJS</a></li>
+                <li class="nav-item"><a href="ionic.html" class="nav-link active" aria-current="page">Ionic</a></li>
+            </ul>
+        </header>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <svg width="250" height="250" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1.5%;">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M30.4327 9.05578L30.5633 9.36054C31.5211 11.4721 32 13.6925 32 16C32 24.8163 24.8163 32 16 32C7.18367 32 0 24.8163 0 16C0 7.18367 7.18367 0 16 0C18.5905 0 21.0503 0.609524 23.3143 1.7415L23.619 1.89388L23.3578 2.11156C22.7048 2.63401 22.2041 3.28707 21.8776 4.04898L21.7905 4.26667L21.5946 4.17959C19.8313 3.35238 17.9592 2.91701 16 2.91701C8.77279 2.91701 2.91701 8.77279 2.91701 16C2.91701 23.2272 8.77279 29.083 16 29.083C23.2272 29.083 29.083 23.2054 29.083 16C29.083 14.2803 28.7565 12.5823 28.0816 10.9932L27.9946 10.7755L28.2122 10.6884C28.9741 10.4054 29.6707 9.92653 30.215 9.31701L30.4327 9.05578ZM26.4707 9.36057C28.3102 9.36057 29.8014 7.8694 29.8014 6.02996C29.8014 4.19051 28.3102 2.69934 26.4707 2.69934C24.6313 2.69934 23.1401 4.19051 23.1401 6.02996C23.1401 7.8694 24.6313 9.36057 26.4707 9.36057ZM15.9999 8.70754C11.9727 8.70754 8.7074 11.9728 8.7074 16.0001C8.7074 20.0273 11.9727 23.2926 15.9999 23.2926C20.0271 23.2926 23.2924 20.0273 23.2924 16.0001C23.2924 11.9728 20.0271 8.70754 15.9999 8.70754Z" fill="#4A8BFC"></path>
+        </svg>
+
+        <h1 class="display-5 fw-bold">Ionic</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+                Ionic es un SDK (kit de desarrollo de software) de código abierto para desarrollo de aplicaciones móviles híbridas. 
+                Originalmente fue construido usando AngularJS y Apache Cordova. 
+                Sin embargo, ahora puede ser utilizado junto con cualquier framework de interfaz o incluso también sin ningún framework. 
+            </p>
+
+            <p class="lead mb-4"> Ionic provee los servicios para desarrollar aplicaciones web, móviles y de escritorio utilizando tecnologías web como CSS, HTML5, y Sass. </p>
+        </div>
+        <div class="b-example-divider"></div>
+    </div>
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold">Aplicaciones que confían en Ionic</h1>
+    </div>
+
+
+    <div class="container marketing">
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="d-block mx-auto mb-4"
+                    src="https://play-lh.googleusercontent.com/XAoYL6XpPDDHsgePDKoQX-tc0DdCJZFYPc5L79iNYSEw3grbR8g-oBUE5n0mRDDXnpE"
+                    alt="9gag" width="200" height="200">
+
+                <h2>Market Watch</h2>
+                <p>Market Watch es una aplicación para dispositivos móviles que brinda a los usuarios noticias de finanzas, negocios y bolsa. Además, muestra las noticias más actuales de la empresa, cotizaciones bursátiles, asesoramiento financiero y datos de mercado. Lo más importante es que, como aplicación Ionic, funciona muy bien tanto en dispositivos Android como iOS. </p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+
+                <img class="d-block mx-auto mb-4"
+                    src="https://img.icons8.com/color/452/mcdonalds-app.png"
+                    alt="marketwatch" width="200" height="200">
+
+                <h2>McDonald's (TK)</h2>
+                <p>Como todas las grandes empresas, McDonald's también dedica muchos esfuerzos y recursos a crear una presencia digital sólida. Es por ello que decidieron confiar en Ionic para su aplicación móvil de pedidos de alimentos en Turquía. La aplicación ofrece distintas ofertas y descuentos para los clientes.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="d-block mx-auto mb-4"
+                    src="https://es.diesel.com/on/demandware.static/Sites-DieselES-Site/-/default/dw907cad0d/images/logo.svg"
+                    alt="mcdonalds" width="320" height="200">
+
+                <h2>DIESEL</h2>
+                <p>La conocida marca Diesel también tiene su propia aplicación Ionic. Ayuda al equipo de merchandising a crear informes y analizar cada tienda y producto de Diesel. Además, ayuda a la marca a encontrar mejores formas de presentarse. Debido al marco Ionic, la aplicación viene con un buen rendimiento y una interfaz de usuario de alta calidad que hace que se vea y se sienta como una aplicación nativa.</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+        <div class="row" style="margin-top: 2%;;">
+            <div class="col-lg-4">
+                <img class="d-block mx-auto mb-4"
+                    src="https://play-lh.googleusercontent.com/KyP6tycYadkIuQY-w_4c0_feiK5qw9ftVOGn9rF-Mo0WmUxKgjDeKaIcgeAW7xp0a7s"
+                    alt="sworkit" width="200" height="200">
+
+                <h2>Sworkit</h2>
+                <p>Además, Sworkit es una aplicación de fitness utilizada por más de 25 millones de personas. Dentro de la aplicación es posible encontrar una gran diversidad de ejercicios y videos de entrenamiento. Esta aplicación ofrece la posibilidad de entrenar en cualquier lugar, sin necesidad de equipo. </p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+
+                <img class="d-block mx-auto mb-4"
+                    src="https://play-lh.googleusercontent.com/zdkBgIAx4BA6e9zwIuzQjLu59fF40UahyekuNISeTCQPMuJMjbweFB13meGeSZechbPh"
+                    alt="pacifica" width="200" height="200">
+
+                <h2>Sanvello</h2>
+                <p>Sanvello (anteriormente conocido como Pacifica), es una aplicación móvil que utiliza herramientas de la terapia cognitivo-conductual para ayudar a los usuarios a controlar el estrés, la ansiedad y la depresión.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="d-block mx-auto mb-4"
+                    src="https://play-lh.googleusercontent.com/Riuz226TXAawu8ZXlL7wnsjtMHkTMTDh_RSRiozAdoKe2TyGG4cLp3rPB0CxQFEUzFc" alt="Buzzfeed" width="200"
+                    height="200">
+
+                <h2>JustWatch</h2>
+                <p> JustWatch es una aplicación de motor de búsqueda para contenido de transmisión en línea. La aplicación ofrece los contenidos que están legalmente disponibles y son populares en el mercado en línea. Algunos de los servicios incluidos aquí son: Netflix, Amazon Prime Video, HBO Now y otros. La aplicación está disponible para dispositivos Android e iOS. </p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
