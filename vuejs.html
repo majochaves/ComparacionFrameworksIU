@@ -8,7 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
-    
+    <script src="https://kit.fontawesome.com/3964857799.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="border-bottom border-success brillante">
@@ -47,34 +47,43 @@
     </nav>
   </div>
 
-<div class="container-fluid bg-dark pt-5 pb-3">
+  <div class="container-fluid bg-dark pt-5 pb-3">
 
-  <div class="row justify-content-center p-5 pb-3">
-      <div class="col-auto">
-          <img class="imgVue" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/512px-Vue.js_Logo_2.svg.pngvuejs.png" alt="" width="250" height="200">
-      </div>
+    <div class="row justify-content-center p-5 pb-3">
+        <div class="col-auto">
+            <img class="imgVue" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/512px-Vue.js_Logo_2.svg.pngvuejs.png" alt="" width="250" height="200">
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h1 class="display-3 fw-bold textoColorVerde">Vue.js</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <p class="lead mb-4 text-center mt-2 text-white">
+              Vue es un framework progresivo de JavaScript (citando el vídeo de su web: Si estás usando un 
+              framework de aplicaciones web puedes incluir a Vue a solo una parte de la aplicación) de código abierto para la 
+              construcción de interfaces de usuario.
+            </p>
+            <p class="lead mb-4 text-center mt-2 text-white">
+              Vue como tal es otro framework que separa la interfaz gráfica de usuario de la lógica de la aplicación y que se usa para SPAs (aplicaciones de página única).
+            </p>
+        </div>
+    </div>
   </div>
 
-  <div class="row justify-content-center">
-      <div class="col-auto">
-          <h1 class="display-3 fw-bold textoColorVerde">Vue.js</h1>
-      </div>
+        <!--Boton comparar frameworks-->
+  <div class="row justify-content-center pt-2 pb-4">
+    <div class="col-10 col-sm-8 col-lg-6 text-center">
+      <a type="button" class="btn btn-info btn-lg btn-block text-white" href="./index.html"
+        style="background-color: #3BBA86 !important; border-color: #3BBA86 !important;">
+         Comparar Ionic con otros Frameworks &nbsp;&nbsp;<i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
   </div>
-
-  <div class="row justify-content-center">
-      <div class="col-10 col-sm-8 col-lg-6">
-          <p class="lead mb-4 text-center mt-2 text-white">
-            Vue es un framework progresivo de JavaScript (citando el vídeo de su web: Si estás usando un 
-            framework de aplicaciones web puedes incluir a Vue a solo una parte de la aplicación) de código abierto para la 
-            construcción de interfaces de usuario.
-          </p>
-          <p class="lead mb-4 text-center mt-2 text-white">
-            Vue como tal es otro framework que separa la interfaz gráfica de usuario de la lógica de la aplicación y que se usa para SPAs (aplicaciones de página única).
-          </p>
-      </div>
-  </div>
-  
-</div>
 
   <div class="px-4 pt-5 my-5 text-center border-bottom">
     <h1 class="display-4 fw-bold">Sitios web que confían en Vue</h1>
@@ -131,6 +140,41 @@
               trabajo de reporteros de la plantilla, colaboradores, dibujantes sindicados y su comunidad.</p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
+  </div>
+
+  <!--Botón para siguiente Framework(SOLO SE MUESTRA SI ES EN lg o mas)-->
+  <div class="d-none d-lg-block">
+    <div class="row pt-2 pb-4">
+        <div class="col-lg-6 d-grid gap-2">
+                <a type="button" class="btn btn-outline-dark btn-lg btn-block" href="./reactnative.html">
+                    <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Volver al Framework anterior
+                </a>
+        </div>
+        <div class="col-lg-6 d-grid gap-2">
+            
+            <a type="button" class="btn btn-info btn-lg btn-block text-white" href="./angularjs.html" style="background-color: #3BBA86 !important; border-color: #3BBA86 !important;">
+                Ir al siguiente Framework  &nbsp;&nbsp;<i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+  <!--Botón para siguiente Framework(SOLO SE MUESTRA SI ES de xs hasta md)-->
+  <div class="d-md-block d-lg-none">
+    <div class="row pt-2 pb-4">
+        <div class="col-6 d-grid gap-2">
+                <a type="button" class="btn btn-outline-dark btn-lg btn-block" href="./reactnative.html">
+                    <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Volver
+                </a>
+        </div>
+        <div class="col-6 d-grid gap-2">
+            
+            <a type="button" class="btn btn-info btn-lg btn-block text-white" href="./angularjs.html" style="background-color: #3BBA86 !important; border-color: #3BBA86 !important;">
+                Siguiente &nbsp;&nbsp;<i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
   </div>
 
 
