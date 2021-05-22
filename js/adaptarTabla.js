@@ -16,6 +16,11 @@ let filasVue = document.getElementsByClassName('filaVue');
 let filasReact = document.getElementsByClassName('filaReact');
 let filasIonic = document.getElementsByClassName('filaIonic');
 
+//Obtenemos los radio de los primeros y segundos grupo
+let listaRadiog1 = document.getElementsByName('btnradiog1');
+let listaRadiog2 = document.getElementsByName('btnradiog2');
+
+
 //Obtenemos el div que oculta ta tabla cuando la pantalla del usuario es mas pequenyo
 let elDivQueOculta = document.getElementById('elDivQueOculta');
 
@@ -85,7 +90,6 @@ function mostrarFilas(tecnologia, mostrar){
 
 
 //Eventos de los botones del primer grupo
-let colocadoDivMostrarTodo = false;
 function ocultarTodosLosElementos(){
     if(primeraVez){
         mostrarFilas(angular, false);
@@ -94,9 +98,6 @@ function ocultarTodosLosElementos(){
         mostrarFilas(ionic, false);
         elDivQueOculta.setAttribute('class', '');
         primeraVez = false;
-    }
-
-    if(!colocadoDivMostrarTodo){
         divMostrarTodoOtraVez.setAttribute('class', 'd-none d-lg-block');
         colocadoDivMostrarTodo = true;
     }
@@ -206,7 +207,17 @@ function eventoBotonMostrarTodo(){
     mostrarFilas(react, true);
     mostrarFilas(ionic, true);
     divMostrarTodoOtraVez.setAttribute('class', 'd-none');
-    colocadoDivMostrarTodo = false;
+
+    primeraVez = true;
+    elDivQueOculta.setAttribute('class', 'd-none d-lg-block');
+    
+    for(let i = 0; i<listaRadiog1.length;i++){
+        listaRadiog1[i].checked = false;
+    }
+
+    for(let i = 0; i<listaRadiog2.length;i++){
+        listaRadiog2[i].checked = false;
+    }
 }
 
 botonMostrarTodoOtraVez.addEventListener("click", eventoBotonMostrarTodo);
