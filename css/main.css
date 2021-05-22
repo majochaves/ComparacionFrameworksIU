@@ -13,7 +13,7 @@
     height: 45px;
 }
 
-/*      COLORES   */
+/*      COLORES  - verde */
 .textoColorVerde {
     color: #3BBA86;
 }
@@ -26,6 +26,42 @@ a.linkVerde{
 .border-success.oscuro{
     border-color: #33691e !important;
 }
+
 .border-info.oscuro{
     border-color: #01579b !important;
+}
+
+
+/*      COLORES  - rojo */
+.textoColorRojo {
+    color: #c3002f;
+}
+
+a.linkRojo{
+    color: #e53935 !important; 
+    text-decoration: none;
+}
+
+/*      COLORES  - azul */
+.border-azul{
+    border-color: #4A8BFC !important;
+}
+
+a.linkColorAzul{
+    color: #4A8BFC !important; 
+    text-decoration: none;
+}
+
+.textoColorAzul{
+    color: #4A8BFC;
+}
+
+.botonColorAzul{
+    background-color: #4A8BFC !important; 
+    border-color: #4A8BFC !important;
+}
+
+.botonColorAzul:hover{
+    background-color: #588be4 !important; 
+    border-color: #588be4 !important;
 }
