@@ -16,15 +16,22 @@ let filasVue = document.getElementsByClassName('filaVue');
 let filasReact = document.getElementsByClassName('filaReact');
 let filasIonic = document.getElementsByClassName('filaIonic');
 
+//Obtenemos el div que oculta ta tabla cuando la pantalla del usuario es mas pequenyo
+let elDivQueOculta = document.getElementById('elDivQueOculta');
 
+//Constantes
 const angular = 'ANGULAR';
 const vue = 'VUE';
 const react = 'REACTNATIVE';
 const ionic = 'IONIC';
 
-
+//Ultimo seleccionado por cada grupo
 let ultimoSeleccionadoPrimerGrupo;
 let ultimoSeleccionadoSegundoGrupo;
+
+
+let primeraVez = true;
+
 
 
 
@@ -74,7 +81,22 @@ function mostrarFilas(tecnologia, mostrar){
 
 //Eventos de los botones del primer grupo
 
+function ocultarTodosLosElementos(){
+    if(primeraVez){
+        mostrarFilas(angular, false);
+        mostrarFilas(vue, false);
+        mostrarFilas(react, false);
+        mostrarFilas(ionic, false);
+        elDivQueOculta.setAttribute('class', '');
+        //ultimoSeleccionadoPrimerGrupo = angular;
+        //ultimoSeleccionadoSegundoGrupo = vue;
+        primeraVez = false;
+    }
+}
+
+
 function angularEventoPrimerGrupo(){
+    ocultarTodosLosElementos();
     if(ultimoSeleccionadoPrimerGrupo !== angular){
         if(ultimoSeleccionadoPrimerGrupo !== ultimoSeleccionadoSegundoGrupo)
             mostrarFilas(ultimoSeleccionadoPrimerGrupo, false);
@@ -84,6 +106,7 @@ function angularEventoPrimerGrupo(){
 }
 
 function vueEventoPrimerGrupo(){
+    ocultarTodosLosElementos();
     if(ultimoSeleccionadoPrimerGrupo !== vue){
         if(ultimoSeleccionadoPrimerGrupo !== ultimoSeleccionadoSegundoGrupo)
             mostrarFilas(ultimoSeleccionadoPrimerGrupo, false);
@@ -93,6 +116,7 @@ function vueEventoPrimerGrupo(){
 }
 
 function reactEventoPrimerGrupo(){
+    ocultarTodosLosElementos();
     if(ultimoSeleccionadoPrimerGrupo !== react){
         if(ultimoSeleccionadoPrimerGrupo !== ultimoSeleccionadoSegundoGrupo)
             mostrarFilas(ultimoSeleccionadoPrimerGrupo, false);
@@ -102,6 +126,7 @@ function reactEventoPrimerGrupo(){
 }
 
 function ionicEventoPrimerGrupo(){
+    ocultarTodosLosElementos();
     if(ultimoSeleccionadoPrimerGrupo !== ionic){
         if(ultimoSeleccionadoPrimerGrupo !== ultimoSeleccionadoSegundoGrupo)
             mostrarFilas(ultimoSeleccionadoPrimerGrupo, false);
@@ -121,6 +146,7 @@ ionicbtn1.addEventListener("click", ionicEventoPrimerGrupo);
 //Eventos de los botones del SEGUNDO grupo
 
 function angularEventoSegundoGrupo(){
+    ocultarTodosLosElementos();
     if(ultimoSeleccionadoSegundoGrupo !== angular){
         if(ultimoSeleccionadoPrimerGrupo !== ultimoSeleccionadoSegundoGrupo)
             mostrarFilas(ultimoSeleccionadoSegundoGrupo, false);
@@ -130,6 +156,7 @@ function angularEventoSegundoGrupo(){
 }
 
 function vueEventoSegundoGrupo(){
+    ocultarTodosLosElementos();
     if(ultimoSeleccionadoSegundoGrupo !== vue){
         if(ultimoSeleccionadoPrimerGrupo !== ultimoSeleccionadoSegundoGrupo)
             mostrarFilas(ultimoSeleccionadoSegundoGrupo, false);
@@ -139,6 +166,7 @@ function vueEventoSegundoGrupo(){
 }
 
 function reactEventoSegundoGrupo(){
+    ocultarTodosLosElementos();
     if(ultimoSeleccionadoSegundoGrupo !== react){
         if(ultimoSeleccionadoPrimerGrupo !== ultimoSeleccionadoSegundoGrupo)
             mostrarFilas(ultimoSeleccionadoSegundoGrupo, false);
@@ -148,6 +176,7 @@ function reactEventoSegundoGrupo(){
 }
 
 function ionicEventoSegundoGrupo(){
+    ocultarTodosLosElementos();
     if(ultimoSeleccionadoSegundoGrupo !== ionic){
         if(ultimoSeleccionadoPrimerGrupo !== ultimoSeleccionadoSegundoGrupo)
             mostrarFilas(ultimoSeleccionadoSegundoGrupo, false);

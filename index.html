@@ -57,173 +57,196 @@
 
     <div class="container-fluid bg-light pt-3 pb-5 ps-5 pe-5">
         
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="btnradiog1" id="btnradio1g1" autocomplete="off" checked>
-            <label class="btn btn-outline-primary" for="btnradio1g1" id="angularbtn1">AngularJS</label>
+        <!--Solo se muestra de xs hasta -->
+        <div class="d-md-block d-lg-none">
 
-            <input type="radio" class="btn-check" name="btnradiog1" id="btnradio2g1" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio2g1" id="reactbtn1">React Native</label>
-            
-            <input type="radio" class="btn-check" name="btnradiog1" id="btnradio3g1" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio3g1" id="vuebtn1">Vue</label>
+            <div class="row justify-content-center pb-3">
+                <div class="col-auto">
+                    <h3 class="fw-bold text-dark">Selecciona los Frameworks</h3>
+                </div>
+            </div>
 
-            <input type="radio" class="btn-check" name="btnradiog1" id="btnradio4g1" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio4g1" id="ionicbtn1">Ionic</label>
+            <div class="row justify-content-center pb-3">
+                <div class="col-auto">
+                    <!--Primer grupo de botones-->
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradiog1" id="btnradio1g1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio1g1" id="angularbtn1">AngularJS</label>
 
+                        <input type="radio" class="btn-check" name="btnradiog1" id="btnradio2g1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2g1" id="reactbtn1">React Native</label>
+                        
+                        <input type="radio" class="btn-check" name="btnradiog1" id="btnradio3g1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio3g1" id="vuebtn1">Vue</label>
+
+                        <input type="radio" class="btn-check" name="btnradiog1" id="btnradio4g1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio4g1" id="ionicbtn1">Ionic</label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center pb-1">
+                <div class="col-auto">
+                    <!--Segundo grupo de botones-->
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio1" id="angularbtn2">AngularJS</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2" id="reactbtn2">React Native</label>
+                        
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio3" id="vuebtn2">Vue</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio4" id="ionicbtn2">Ionic</label>
+
+                    </div>
+                </div>
+            </div>
         </div>
-
         
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-            <label class="btn btn-outline-primary" for="btnradio1" id="angularbtn2">AngularJS</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio2" id="reactbtn2">React Native</label>
-            
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio3" id="vuebtn2">Vue</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btnradio4" id="ionicbtn2">Ionic</label>
-
+    <!--Se muestra solo de lg o más. Cuando el usuario seleccione de nuevo algun boton se volverá a mostrar-->
+        <div class="d-none d-lg-block" id="elDivQueOculta">
+            <table class="table table-hover mt-4">
+                <tr>
+                    <th></th>
+                    <th class="collapse.show multi-collapse filaAngular"><a href="angularjs.html" class="nav-link">AngularJS</a></th>
+                    <th class="collapse.show multi-collapse filaReact"><a href="reactnative.html" class="nav-link">React Native</a></th>
+                    <th class="collapse.show multi-collapse filaVue"><a href="vuejs.html" class="nav-link">Vue.js</a></th>
+                    <th class="collapse.show multi-collapse filaIonic"><a href="ionic.html" class="nav-link">Ionic</a></th>
+                </tr>
+                <tr>
+                    <th>Creador</th>
+                    <td class="collapse.show multi-collapse filaAngular">Google</td>
+                    <td class="collapse.show multi-collapse filaReact">Facebook</td>
+                    <td class="collapse.show multi-collapse filaVue">Evan You</td>
+                    <td class="collapse.show multi-collapse filaIonic">Drifty</td>
+                </tr>
+                <tr>
+                    <th>Programado en</th>
+                    <td class="collapse.show multi-collapse filaAngular">JavaScript</td>
+                    <td class="collapse.show multi-collapse filaReact">Java, JavaScript, C++, Objective-C, Objective-C++,Python</td>
+                    <td class="collapse.show multi-collapse filaVue">JavaScript + HTML</td>
+                    <td class="collapse.show multi-collapse filaIonic">JavaScript, HTML y CSS</td>
+                </tr>
+                <tr>
+                    <th>Lenguaje utilizado</th>
+                    <td class="collapse.show multi-collapse filaAngular">JavaScript</td>
+                    <td class="collapse.show multi-collapse filaReact">JavaScript y React (Se recomienda conocimientos de Java y Swift)</td>
+                    <td class="collapse.show multi-collapse filaVue">JavaScript</td>
+                    <td class="collapse.show multi-collapse filaIonic">JavaScript</td>
+                </tr>
+                <tr>
+                    <th>Código abierto</th>
+                    <td class="collapse.show multi-collapse filaAngular">Sí</td>
+                    <td class="collapse.show multi-collapse filaReact">Sí</td>
+                    <td class="collapse.show multi-collapse filaVue">Sí</td>
+                    <td class="collapse.show multi-collapse filaIonic">Sí</td>
+                </tr>
+                <tr>
+                    <th>Enfoque</th>
+                    <td class="collapse.show multi-collapse filaAngular">SPA (Single Page Application)</td>
+                    <td class="collapse.show multi-collapse filaReact">Desarrollo de aplicaciones móviles y de escritorio</td>
+                    <td class="collapse.show multi-collapse filaVue">SPA (Single Page Application)</td>
+                    <td class="collapse.show multi-collapse filaIonic">Desarrollo de aplicaciones móviles</td>
+                </tr>
+                <tr>
+                    <th>Licencia MIT</th>
+                    <td class="collapse.show multi-collapse filaAngular">Sí</td>
+                    <td class="collapse.show multi-collapse filaReact">Sí</td>
+                    <td class="collapse.show multi-collapse filaVue">Sí</td>
+                    <td class="collapse.show multi-collapse filaIonic">Sí</td>
+                </tr>
+                <tr>
+                    <th>Patrón de diseño</th>
+                    <td class="collapse.show multi-collapse filaAngular">MVC</td>
+                    <td class="collapse.show multi-collapse filaReact">Container-View</td>
+                    <td class="collapse.show multi-collapse filaVue">MVVM (Model-View-ViewModel)</td>
+                    <td class="collapse.show multi-collapse filaIonic">MVC</td>
+                </tr>
+                <tr>
+                    <th>Permite cross-platform development</th>
+                    <td class="collapse.show multi-collapse filaAngular">Sí</td>
+                    <td class="collapse.show multi-collapse filaReact">Sí</td>
+                    <td class="collapse.show multi-collapse filaVue">No (nativamente).</td>
+                    <td class="collapse.show multi-collapse filaIonic">Sí</td>
+                </tr>
+                <tr>
+                    <th>Permite hot-reloading</th>
+                    <td class="collapse.show multi-collapse filaAngular">Sí</td>
+                    <td class="collapse.show multi-collapse filaReact">Sí</td>
+                    <td class="collapse.show multi-collapse filaVue">Sí</td>
+                    <td class="collapse.show multi-collapse filaIonic">No</td>
+                </tr>
+                <tr>
+                    <th>Rendimiento</th>
+                    <td class="collapse.show multi-collapse filaAngular">Medio (problemas de rendimiento de “Dirty checking”)</td>
+                    <td class="collapse.show multi-collapse filaReact">Alto (JavaScript puede comunicarse con elementos nativos - Bridge)</td>
+                    <td class="collapse.show multi-collapse filaVue">Alto</td>
+                    <td class="collapse.show multi-collapse filaIonic">Bajo en aplicaciones nativas</td>
+                </tr>
+                <tr>
+                    <th>Seguridad</th>
+                    <td class="collapse.show multi-collapse filaAngular">Vulnerabilidad XSS</td>
+                    <td class="collapse.show multi-collapse filaReact">Posibles problemas con  JavaScript</td>
+                    <td class="collapse.show multi-collapse filaVue">Vulnerabilidad XSS</td>
+                    <td class="collapse.show multi-collapse filaIonic">Posibles problemas en aplicaciones híbridas</td>
+                </tr>
+                <tr>
+                    <th>Año de lanzamiento</th>
+                    <td class="collapse.show multi-collapse filaAngular">2010</td>
+                    <td class="collapse.show multi-collapse filaReact">2015</td>
+                    <td class="collapse.show multi-collapse filaVue">2014</td>
+                    <td class="collapse.show multi-collapse filaIonic">2013</td>
+                </tr>
+                <tr>
+                    <th>Compatibilidad</th>
+                    <td class="collapse.show multi-collapse filaAngular">Compatible con frameworks de backend</td>
+                    <td class="collapse.show multi-collapse filaReact">Compatible con Ionic y frameworks de backend. Puede tener algún problema de compatibilidad debido a su versión.</td>
+                    <td class="collapse.show multi-collapse filaVue">Compatible con Ionic y frameworks de backend</td>
+                    <td class="collapse.show multi-collapse filaIonic">Compatible con Angular, React, Vue, Vanilla Javascript</td>
+                </tr>
+                <tr>
+                    <th>Tamaño</th>
+                    <td class="collapse.show multi-collapse filaAngular">1.2MB</td>
+                    <td class="collapse.show multi-collapse filaReact">8.22MB</td>
+                    <td class="collapse.show multi-collapse filaVue">-</td>
+                    <td class="collapse.show multi-collapse filaIonic">2.88MB</td>
+                </tr>
+                <tr>
+                    <th>Última versión</th>
+                    <td class="collapse.show multi-collapse filaAngular">1.8.2</td>
+                    <td class="collapse.show multi-collapse filaReact">0.64</td>
+                    <td class="collapse.show multi-collapse filaVue">3.0.11</td>
+                    <td class="collapse.show multi-collapse filaIonic">5.3.4</td>
+                </tr>
+                <tr>
+                    <th>Curva de aprendizaje</th>
+                    <td class="collapse.show multi-collapse filaAngular">Alta (conceptos difusos y gran complejidad)</td>
+                    <td class="collapse.show multi-collapse filaReact">Baja</td>
+                    <td class="collapse.show multi-collapse filaVue">Baja (necesita estar familiarizado con HTML y ES5 JavaScript).</td>
+                    <td class="collapse.show multi-collapse filaIonic">Baja</td>
+                </tr>
+                <tr>
+                    <th>Popularidad (según encuestas oficiales de JetBrains)</th>
+                    <td class="collapse.show multi-collapse filaAngular">11%</td>
+                    <td class="collapse.show multi-collapse filaReact">21%</td>
+                    <td class="collapse.show multi-collapse filaVue">32%</td>
+                    <td class="collapse.show multi-collapse filaIonic">6%</td>
+                </tr>
+                <tr>
+                    <th>Demanda en el mercado</th>
+                    <td class="collapse.show multi-collapse filaAngular">Alta</td>
+                    <td class="collapse.show multi-collapse filaReact">Muy alta.</td>
+                    <td class="collapse.show multi-collapse filaVue">Baja</td>
+                    <td class="collapse.show multi-collapse filaIonic">Baja</td>
+                </tr>
+            </table>
         </div>
 
 
-        <table class="table table-hover mt-4">
-            <tr>
-                <th></th>
-                <th class="collapse multi-collapse filaAngular"><a href="angularjs.html" class="nav-link">AngularJS</a></th>
-                <th class="collapse multi-collapse filaReact"><a href="reactnative.html" class="nav-link">React Native</a></th>
-                <th class="collapse multi-collapse filaVue"><a href="vuejs.html" class="nav-link">Vue.js</a></th>
-                <th class="collapse multi-collapse filaIonic"><a href="ionic.html" class="nav-link">Ionic</a></th>
-            </tr>
-            <tr>
-                <th>Creador</th>
-                <td class="collapse multi-collapse filaAngular">Google</td>
-                <td class="collapse multi-collapse filaReact">Facebook</td>
-                <td class="collapse multi-collapse filaVue">Evan You</td>
-                <td class="collapse multi-collapse filaIonic">Drifty</td>
-            </tr>
-            <tr>
-                <th>Programado en</th>
-                <td class="collapse multi-collapse filaAngular">JavaScript</td>
-                <td class="collapse multi-collapse filaReact">Java, JavaScript, C++, Objective-C, Objective-C++,Python</td>
-                <td class="collapse multi-collapse filaVue">JavaScript + HTML</td>
-                <td class="collapse multi-collapse filaIonic">JavaScript, HTML y CSS</td>
-            </tr>
-            <tr>
-                <th>Lenguaje utilizado</th>
-                <td class="collapse multi-collapse filaAngular">JavaScript</td>
-                <td class="collapse multi-collapse filaReact">JavaScript y React (Se recomienda conocimientos de Java y Swift)</td>
-                <td class="collapse multi-collapse filaVue">JavaScript</td>
-                <td class="collapse multi-collapse filaIonic">JavaScript</td>
-            </tr>
-            <tr>
-                <th>Código abierto</th>
-                <td class="collapse multi-collapse filaAngular">Sí</td>
-                <td class="collapse multi-collapse filaReact">Sí</td>
-                <td class="collapse multi-collapse filaVue">Sí</td>
-                <td class="collapse multi-collapse filaIonic">Sí</td>
-            </tr>
-            <tr>
-                <th>Enfoque</th>
-                <td class="collapse multi-collapse filaAngular">SPA (Single Page Application)</td>
-                <td class="collapse multi-collapse filaReact">Desarrollo de aplicaciones móviles y de escritorio</td>
-                <td class="collapse multi-collapse filaVue">SPA (Single Page Application)</td>
-                <td class="collapse multi-collapse filaIonic">Desarrollo de aplicaciones móviles</td>
-            </tr>
-            <tr>
-                <th>Licencia MIT</th>
-                <td class="collapse multi-collapse filaAngular">Sí</td>
-                <td class="collapse multi-collapse filaReact">Sí</td>
-                <td class="collapse multi-collapse filaVue">Sí</td>
-                <td class="collapse multi-collapse filaIonic">Sí</td>
-            </tr>
-            <tr>
-                <th>Patrón de diseño</th>
-                <td class="collapse multi-collapse filaAngular">MVC</td>
-                <td class="collapse multi-collapse filaReact">Container-View</td>
-                <td class="collapse multi-collapse filaVue">MVVM (Model-View-ViewModel)</td>
-                <td class="collapse multi-collapse filaIonic">MVC</td>
-            </tr>
-            <tr>
-                <th>Permite cross-platform development</th>
-                <td class="collapse multi-collapse filaAngular">Sí</td>
-                <td class="collapse multi-collapse filaReact">Sí</td>
-                <td class="collapse multi-collapse filaVue">No (nativamente).</td>
-                <td class="collapse multi-collapse filaIonic">Sí</td>
-            </tr>
-            <tr>
-                <th>Permite hot-reloading</th>
-                <td class="collapse multi-collapse filaAngular">Sí</td>
-                <td class="collapse multi-collapse filaReact">Sí</td>
-                <td class="collapse multi-collapse filaVue">Sí</td>
-                <td class="collapse multi-collapse filaIonic">No</td>
-            </tr>
-            <tr>
-                <th>Rendimiento</th>
-                <td class="collapse multi-collapse filaAngular">Medio (problemas de rendimiento de “Dirty checking”)</td>
-                <td class="collapse multi-collapse filaReact">Alto (JavaScript puede comunicarse con elementos nativos - Bridge)</td>
-                <td class="collapse multi-collapse filaVue">Alto</td>
-                <td class="collapse multi-collapse filaIonic">Bajo en aplicaciones nativas</td>
-            </tr>
-            <tr>
-                <th>Seguridad</th>
-                <td class="collapse multi-collapse filaAngular">Vulnerabilidad XSS</td>
-                <td class="collapse multi-collapse filaReact">Posibles problemas con  JavaScript</td>
-                <td class="collapse multi-collapse filaVue">Vulnerabilidad XSS</td>
-                <td class="collapse multi-collapse filaIonic">Posibles problemas en aplicaciones híbridas</td>
-            </tr>
-            <tr>
-                <th>Año de lanzamiento</th>
-                <td class="collapse multi-collapse filaAngular">2010</td>
-                <td class="collapse multi-collapse filaReact">2015</td>
-                <td class="collapse multi-collapse filaVue">2014</td>
-                <td class="collapse multi-collapse filaIonic">2013</td>
-            </tr>
-            <tr>
-                <th>Compatibilidad</th>
-                <td class="collapse multi-collapse filaAngular">Compatible con frameworks de backend</td>
-                <td class="collapse multi-collapse filaReact">Compatible con Ionic y frameworks de backend. Puede tener algún problema de compatibilidad debido a su versión.</td>
-                <td class="collapse multi-collapse filaVue">Compatible con Ionic y frameworks de backend</td>
-                <td class="collapse multi-collapse filaIonic">Compatible con Angular, React, Vue, Vanilla Javascript</td>
-            </tr>
-            <tr>
-                <th>Tamaño</th>
-                <td class="collapse multi-collapse filaAngular">1.2MB</td>
-                <td class="collapse multi-collapse filaReact">8.22MB</td>
-                <td class="collapse multi-collapse filaVue">-</td>
-                <td class="collapse multi-collapse filaIonic">2.88MB</td>
-            </tr>
-            <tr>
-                <th>Última versión</th>
-                <td class="collapse multi-collapse filaAngular">1.8.2</td>
-                <td class="collapse multi-collapse filaReact">0.64</td>
-                <td class="collapse multi-collapse filaVue">3.0.11</td>
-                <td class="collapse multi-collapse filaIonic">5.3.4</td>
-            </tr>
-            <tr>
-                <th>Curva de aprendizaje</th>
-                <td class="collapse multi-collapse filaAngular">Alta (conceptos difusos y gran complejidad)</td>
-                <td class="collapse multi-collapse filaReact">Baja</td>
-                <td class="collapse multi-collapse filaVue">Baja (necesita estar familiarizado con HTML y ES5 JavaScript).</td>
-                <td class="collapse multi-collapse filaIonic">Baja</td>
-            </tr>
-            <tr>
-                <th>Popularidad (según encuestas oficiales de JetBrains)</th>
-                <td class="collapse multi-collapse filaAngular">11%</td>
-                <td class="collapse multi-collapse filaReact">21%</td>
-                <td class="collapse multi-collapse filaVue">32%</td>
-                <td class="collapse multi-collapse filaIonic">6%</td>
-            </tr>
-            <tr>
-                <th>Demanda en el mercado</th>
-                <td class="collapse multi-collapse filaAngular">Alta</td>
-                <td class="collapse multi-collapse filaReact">Muy alta.</td>
-                <td class="collapse multi-collapse filaVue">Baja</td>
-                <td class="collapse multi-collapse filaIonic">Baja</td>
-            </tr>
-        </table>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
