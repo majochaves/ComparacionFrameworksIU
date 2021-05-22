@@ -13,6 +13,7 @@
     height: 45px;
 }
 
+
 /*      COLORES  - verde */
 .textoColorVerde {
     color: #3BBA86;
@@ -37,9 +38,10 @@ a.linkVerde{
     border-color: #3fa379 !important;
 }
 
+
 /*      COLORES  - celeste oscuro */
-.border-info.oscuro{
-    border-color: #01579b !important;
+.border-celeste{
+    border-color: #61DBFB !important;
 }
 
 
