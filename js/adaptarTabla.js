@@ -19,6 +19,11 @@ let filasIonic = document.getElementsByClassName('filaIonic');
 //Obtenemos el div que oculta ta tabla cuando la pantalla del usuario es mas pequenyo
 let elDivQueOculta = document.getElementById('elDivQueOculta');
 
+//Obtenemos el div y el boton que solo aparece si has puesto la pantalla mas pequenya
+let botonMostrarTodoOtraVez = document.getElementById('botonMostrarTodoOtraVez');
+let divMostrarTodoOtraVez = document.getElementById('divMostrarTodoOtraVez');
+
+
 //Constantes
 const angular = 'ANGULAR';
 const vue = 'VUE';
@@ -80,7 +85,7 @@ function mostrarFilas(tecnologia, mostrar){
 
 
 //Eventos de los botones del primer grupo
-
+let colocadoDivMostrarTodo = false;
 function ocultarTodosLosElementos(){
     if(primeraVez){
         mostrarFilas(angular, false);
@@ -88,9 +93,12 @@ function ocultarTodosLosElementos(){
         mostrarFilas(react, false);
         mostrarFilas(ionic, false);
         elDivQueOculta.setAttribute('class', '');
-        //ultimoSeleccionadoPrimerGrupo = angular;
-        //ultimoSeleccionadoSegundoGrupo = vue;
         primeraVez = false;
+    }
+
+    if(!colocadoDivMostrarTodo){
+        divMostrarTodoOtraVez.setAttribute('class', 'd-none d-lg-block');
+        colocadoDivMostrarTodo = true;
     }
 }
 
@@ -190,3 +198,15 @@ angularbtn2.addEventListener("click", angularEventoSegundoGrupo);
 vuebtn2.addEventListener("click", vueEventoSegundoGrupo);
 reactbtn2.addEventListener("click", reactEventoSegundoGrupo);
 ionicbtn2.addEventListener("click", ionicEventoSegundoGrupo);
+
+
+function eventoBotonMostrarTodo(){
+    mostrarFilas(angular, true);
+    mostrarFilas(vue, true);
+    mostrarFilas(react, true);
+    mostrarFilas(ionic, true);
+    divMostrarTodoOtraVez.setAttribute('class', 'd-none');
+    colocadoDivMostrarTodo = false;
+}
+
+botonMostrarTodoOtraVez.addEventListener("click", eventoBotonMostrarTodo);

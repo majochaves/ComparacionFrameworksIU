@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
+<body class="bg-light">
     <div class="border-bottom border-light">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -50,14 +50,14 @@
         <br/>
         <div class="row justify-content-center">
             <div class="col-auto">
-                <h1 class="display-3 fw-bold text-white">Comparación de frameworks</h1>
+                <h1 class="display-3 fw-bold text-white text-center">Comparación de frameworks</h1>
             </div>
         </div>
     </div>
 
     <div class="container-fluid bg-light pt-3 pb-5 ps-5 pe-5">
         
-        <!--Solo se muestra de xs hasta -->
+        <!--Solo se muestra de xs hasta lg(sin contar) -->
         <div class="d-md-block d-lg-none">
 
             <div class="row justify-content-center pb-3">
@@ -103,6 +103,14 @@
                         <label class="btn btn-outline-primary" for="btnradio4" id="ionicbtn2">Ionic</label>
 
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center pb-3">
+            <div class="col-auto">
+                <div class="d-none" id="divMostrarTodoOtraVez">
+                    <button class="btn btn-primary" type="button" id="botonMostrarTodoOtraVez">Mostrar todo de nuevo</button>
                 </div>
             </div>
         </div>
