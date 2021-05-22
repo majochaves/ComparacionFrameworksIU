@@ -36,8 +36,8 @@ const react = 'REACTNATIVE';
 const ionic = 'IONIC';
 
 //Ultimo seleccionado por cada grupo
-let ultimoSeleccionadoPrimerGrupo;
-let ultimoSeleccionadoSegundoGrupo;
+let ultimoSeleccionadoPrimerGrupo = "ninguno";
+let ultimoSeleccionadoSegundoGrupo = "ninguno";
 
 
 let primeraVez = true;
