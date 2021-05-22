@@ -27,6 +27,17 @@ a.linkVerde{
     border-color: #33691e !important;
 }
 
+.botonColorVerdeClaro{
+    background-color: #3BBA86 !important;
+    border-color: #3BBA86 !important;
+}
+
+.botonColorVerdeClaro:hover{
+    background-color: #3fa379 !important;
+    border-color: #3fa379 !important;
+}
+
+/*      COLORES  - celeste oscuro */
 .border-info.oscuro{
     border-color: #01579b !important;
 }
